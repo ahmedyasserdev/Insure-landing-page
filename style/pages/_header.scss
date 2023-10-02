@@ -9,7 +9,6 @@ header {
 
         display: flex;
         align-items: center;
-        margin-inline: auto;
     }
 
     div {
@@ -25,7 +24,7 @@ header {
 
 
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
 
             li {
                 a:not(:has(.btn)) {
@@ -51,16 +50,22 @@ header {
                 left: 50%;
                 padding: 2rem 4rem;
                 width: 90%;
-                margin-top: 10rem;
+                margin-top: 12rem;
                 text-align: center;
-                &.show
-{
-                    display: block;
+                transition: all 0.3s linear;
+                -webkit-transition: all 0.3s linear;
+                -moz-transition: all 0.3s linear;
+                -ms-transition: all 0.3s linear;
+                -o-transition: all 0.3s linear;
+                background-color :rgba(255,255,255,0.39)  ;
+                
+                 &.show   {
+                    display: flex;
                 }
 
                 li a {
                     display: grid;
-                    margin-block: 2rem;
+                    color : $dark-violet ;
 
                 }
 
@@ -71,7 +76,9 @@ header {
     }
 
     .btn {
-        @include btn($dark-violet)
+        @include btn($dark-violet , white  );
+
     }
 
 }
+

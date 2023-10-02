@@ -1,0 +1,43 @@
+.blog {
+    @media (min-width: 768px) {
+        padding-top: 18rem;
+    }
+
+    .container {
+        .heading {
+            font-size: 6rem;
+            color: $very-dark-violet;
+
+            &:before {
+                content: "";
+                @include line($dark-violet);
+            }
+        }
+
+        .content-wrapper {
+            padding: 2rem;
+            margin-top: 4rem;
+            @include grid(22rem, 4rem);
+
+            .content {
+                @media (max-width: 767px) {
+                    max-width: 80%;
+                    margin-inline: auto;
+
+                    img {
+                        margin-inline: auto;
+                    }
+                }
+
+                h5 {
+                    font-size: 2.4rem;
+                    padding-block: 0.5em;
+                }
+
+                p {
+                    color: $dark-grayish-violet;
+                }
+            }
+        }
+    }
+}
