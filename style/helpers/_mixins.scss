@@ -1,0 +1,10 @@
+@mixin btn($bg) {
+    border  :1px solid $dark-violet   !important;
+    font-size: 1.8rem  !important ;
+    padding: .4em 1em  !important ;
+    color: $dark-violet  !important ;
+    &:hover {
+        background: $bg  !important ;
+        color : white   !important ;
+    }
+}
