@@ -20,7 +20,6 @@ html {
 body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
-  background-color: #fafafa;
   transition: 200ms all ease;
   -webkit-transition: 200ms all ease;
   -moz-transition: 200ms all ease;
@@ -149,10 +148,10 @@ header {
     height: 100%; }
     @media (min-width: 768px) {
       .hero::after {
-        background-image: url("/images/bg-pattern-intro-left-desktop.svg"); } }
+        background-image: url("../images/bg-pattern-intro-left-desktop.svg"); } }
     @media (max-width: 767px) {
       .hero::after {
-        background-image: url("/images/bg-pattern-intro-left-mobile.svg"); } }
+        background-image: url("../images/bg-pattern-intro-left-mobile.svg"); } }
     @media (max-width: 767px) {
       .hero::after {
         top: 50%;
@@ -169,10 +168,10 @@ header {
     top: 0; }
     @media (min-width: 768px) {
       .hero::before {
-        background-image: url("/images/bg-pattern-intro-right-desktop.svg"); } }
+        background-image: url("../images/bg-pattern-intro-right-desktop.svg"); } }
     @media (max-width: 767px) {
       .hero::before {
-        background-image: url("/images/bg-pattern-intro-right-mobile.svg"); } }
+        background-image: url("../images/bg-pattern-intro-right-mobile.svg"); } }
     @media (max-width: 767px) {
       .hero::before {
         top: 80%;
@@ -292,10 +291,10 @@ header {
   background-size: contain; }
   @media (min-width: 768px) {
     .account .container {
-      background-image: url("/images/bg-pattern-how-we-work-desktop.svg"); } }
+      background-image: url("../images/bg-pattern-how-we-work-desktop.svg"); } }
   @media (max-width: 767px) {
     .account .container {
-      background-image: url("/images/bg-pattern-how-we-work-mobile.svg"); } }
+      background-image: url("../images/bg-pattern-how-we-work-mobile.svg"); } }
   .account .container .content {
     display: flex;
     justify-content: space-between;
@@ -325,5 +324,49 @@ header {
       .account .container .content .btn-wrapper .btn:hover {
         background: white !important;
         color: #2d2640 !important; }
+
+.footer {
+  background-color: #fafafa;
+  background-position: top 0 left 0;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media (min-width: 768px) {
+    .footer {
+      background-image: url("../images/bg-pattern-footer-desktop.svg"); } }
+  @media (max-width: 767px) {
+    .footer {
+      background-image: url("../images/bg-pattern-footer-mobile.svg"); } }
+  .footer .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #837d87;
+    padding-bottom: 4rem; }
+    @media (max-width: 767px) {
+      .footer .top {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem; } }
+    .footer .top .icons {
+      display: flex;
+      align-items: center;
+      gap: 2rem; }
+  .footer .bottom {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 2rem; }
+    @media (max-width: 767px) {
+      .footer .bottom {
+        text-align: center; } }
+    .footer .bottom .col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      .footer .bottom .col .title {
+        font-size: 1.8rem;
+        color: #837d87; }
+      .footer .bottom .col ul li {
+        margin-block: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

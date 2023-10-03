@@ -2,7 +2,7 @@
     .container {
         background-color: $dark-violet;
         padding: 4rem 6rem;
-        @include bg-img ("/images/bg-pattern-how-we-work-desktop.svg", right 0, "/images/bg-pattern-how-we-work-mobile.svg");
+        @include bg-img ("../images/bg-pattern-how-we-work-desktop.svg", right 0, "../images/bg-pattern-how-we-work-mobile.svg");
 
 
         .content {

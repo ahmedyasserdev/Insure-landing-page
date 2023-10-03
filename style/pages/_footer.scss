@@ -1,0 +1,48 @@
+.footer {
+    background-color: $very-light-gray;
+    @include bg-img("../images/bg-pattern-footer-desktop.svg" , top 0 left 0 , "../images/bg-pattern-footer-mobile.svg") ;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $dark-grayish-violet;
+        padding-bottom: 4rem;
+        @media (max-width : 767px ) {
+                flex-direction: column;
+                justify-content: center;
+                gap : 5rem ;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+        
+        }
+    }
+
+    .bottom {
+        padding-top: 4rem;
+        @include grid(23rem , 2rem);
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap  :1rem ;
+            .title {
+                font-size: 1.8rem;
+                color : $dark-grayish-violet;
+            } 
+            ul {
+                li {
+                    margin-block: 1rem;
+                }
+            }
+        }
+
+    }
+
+
+
+}

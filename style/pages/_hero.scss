@@ -7,7 +7,7 @@
     z-index: 2;
 
     &::after {
-        @include pseudo-element("/images/bg-pattern-intro-left-desktop.svg", left 0, "/images/bg-pattern-intro-left-mobile.svg");
+        @include pseudo-element("../images/bg-pattern-intro-left-desktop.svg", left 0, "../images/bg-pattern-intro-left-mobile.svg");
 
         @media (max-width : 767px) {
             top :50%;
@@ -17,7 +17,7 @@
     }
 
     &::before {
-        @include pseudo-element("/images/bg-pattern-intro-right-desktop.svg", right   0, "/images/bg-pattern-intro-right-mobile.svg");
+        @include pseudo-element("../images/bg-pattern-intro-right-desktop.svg", right   0, "../images/bg-pattern-intro-right-mobile.svg");
             top : 0 ;
         @media (max-width : 767px) {
 
