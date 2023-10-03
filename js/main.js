@@ -21,7 +21,7 @@ const footerOffset = footer.offsetTop - 200 ;
 console.log(footerOffset)
 
 icons.forEach((icon) => {
-    icon.style.transition = 'transform 2.5s ease';
+    icon.style.transition = 'transform 2.7s ease';
 });
 
 function handleScroll() {
