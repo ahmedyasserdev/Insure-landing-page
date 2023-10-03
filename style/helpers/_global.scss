@@ -18,6 +18,8 @@ html {
     @media (max-width: 650px) {
         font-size: 50%;
     }
+
+    scroll-behavior: smooth;
 }
 
 // body , html {
@@ -42,6 +44,7 @@ body {
 .container {
     width: 80%;
     margin-inline: auto;
+
     @media(max-width : 767px) {
         width: 90%;
 
@@ -62,7 +65,8 @@ h6 {
 .heading {
     position: relative;
     padding-top: 20px;
-    @media (max-width : 767px ){
+
+    @media (max-width : 767px) {
         text-align: center;
     }
 
@@ -92,6 +96,7 @@ img {
 
         @media(max-width : 767px) {
             display: block;
+
         }
     }
 
@@ -109,5 +114,10 @@ img {
 
 section {
     padding-block: 8.7rem;
-   
+    &.hero {
+        @media (max-width: 767px) {
+            padding-top: 0;
+        }
+    }
+
 }

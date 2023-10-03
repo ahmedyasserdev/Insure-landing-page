@@ -8,7 +8,8 @@
   outline: none; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media (max-width: 991px) {
     html {
       font-size: 55%; } }
@@ -76,6 +77,9 @@ img {
 
 section {
   padding-block: 8.7rem; }
+  @media (max-width: 767px) {
+    section.hero {
+      padding-top: 0; } }
 
 header {
   background-color: white;
@@ -132,40 +136,83 @@ header {
       color: white !important; }
 
 .hero {
-  background: #2d2640; }
-  @media (max-width: 767px) {
-    .hero {
-      padding-top: 0; } }
-  .hero .wrapper {
+  background: #2d2640;
+  position: relative;
+  z-index: 2; }
+  .hero::after {
+    content: '';
+    background-position: left 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 768px) {
+      .hero::after {
+        background-image: url("/images/bg-pattern-intro-left-desktop.svg"); } }
+    @media (max-width: 767px) {
+      .hero::after {
+        background-image: url("/images/bg-pattern-intro-left-mobile.svg"); } }
+    @media (max-width: 767px) {
+      .hero::after {
+        top: 50%;
+        z-index: -1;
+        width: 80%; } }
+  .hero::before {
+    content: '';
+    background-position: right 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; }
+    @media (min-width: 768px) {
+      .hero::before {
+        background-image: url("/images/bg-pattern-intro-right-desktop.svg"); } }
+    @media (max-width: 767px) {
+      .hero::before {
+        background-image: url("/images/bg-pattern-intro-right-mobile.svg"); } }
+    @media (max-width: 767px) {
+      .hero::before {
+        top: 80%;
+        z-index: 2;
+        width: 40%;
+        right: 0; } }
+  .hero .container.wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; }
     @media (max-width: 767px) {
-      .hero .wrapper {
+      .hero .container.wrapper {
         flex-direction: column-reverse;
         align-items: center;
         gap: 3rem;
-        text-align: center; } }
-    .hero .wrapper .image-wrapper {
+        text-align: center;
+        width: 100%; } }
+    .hero .container.wrapper .image-wrapper {
+      z-index: 1;
       width: 45%;
-      z-index: 222;
       height: 2rem; }
       @media (max-width: 767px) {
-        .hero .wrapper .image-wrapper {
+        .hero .container.wrapper .image-wrapper {
           width: 100%;
-          height: auto; } }
-    .hero .wrapper .content {
+          height: auto; }
+          .hero .container.wrapper .image-wrapper img {
+            width: 100%; } }
+    .hero .container.wrapper .content {
       width: 47%; }
       @media (max-width: 767px) {
-        .hero .wrapper .content {
-          width: 100%;
+        .hero .container.wrapper .content {
+          width: 90%;
+          margin-inline: auto;
           text-align: center; } }
-      .hero .wrapper .content .heading {
+      .hero .container.wrapper .content .heading {
         color: #fafafa;
         line-height: 1.2;
         font-size: clamp(2rem, 5.5rem, 6rem); }
         @media (min-width: 991px) {
-          .hero .wrapper .content .heading:before {
+          .hero .container.wrapper .content .heading:before {
             content: "";
             position: absolute;
             width: 100px;
@@ -174,7 +221,7 @@ header {
             top: 0;
             left: 10px; } }
   @media (min-width: 991px) and (max-width: 767px) {
-    .hero .wrapper .content .heading:before {
+    .hero .container.wrapper .content .heading:before {
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
@@ -182,16 +229,17 @@ header {
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%); } }
 
-      .hero .wrapper .content p {
+      .hero .container.wrapper .content p {
         margin-block: 2rem; }
-      .hero .wrapper .content a {
-        border: 1px solid white !important;
-        font-size: 2rem !important;
-        padding: 0.4em 0.9em !important;
-        color: white !important; }
-        .hero .wrapper .content a:hover {
-          background: white !important;
-          color: #2d2640 !important; }
+  .hero .btn {
+    border: 1px solid white !important;
+    font-size: 2rem !important;
+    padding: 0.4em 0.9em !important;
+    color: white !important;
+    isolation: isolate; }
+    .hero .btn:hover {
+      background: white !important;
+      color: #2d2640 !important; }
 
 @media (min-width: 768px) {
   .blog {
@@ -235,5 +283,47 @@ header {
     padding-block: 0.5em; }
   .blog .container .content-wrapper .content p {
     color: #837d87; }
+
+.account .container {
+  background-color: #2d2640;
+  padding: 4rem 6rem;
+  background-position: right 0;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media (min-width: 768px) {
+    .account .container {
+      background-image: url("/images/bg-pattern-how-we-work-desktop.svg"); } }
+  @media (max-width: 767px) {
+    .account .container {
+      background-image: url("/images/bg-pattern-how-we-work-mobile.svg"); } }
+  .account .container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem; }
+    @media (max-width: 767px) {
+      .account .container .content {
+        flex-direction: column;
+        justify-content: center; } }
+    .account .container .content h1 {
+      color: #fafafa;
+      font-size: 4.3rem; }
+    .account .container .content .btn-wrappr,
+    .account .container .content .title {
+      width: 50%; }
+      @media (max-width: 767px) {
+        .account .container .content .btn-wrappr,
+        .account .container .content .title {
+          width: 100%;
+          text-align: center; } }
+    .account .container .content .btn-wrapper .btn {
+      border: 1px solid white !important;
+      font-size: 2rem !important;
+      padding: 0.4em 0.9em !important;
+      color: white !important; }
+      .account .container .content .btn-wrapper .btn:hover {
+        background: white !important;
+        color: #2d2640 !important; }
 
 /*# sourceMappingURL=style.css.map */
