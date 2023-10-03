@@ -113,10 +113,26 @@ img {
 
 section {
     padding-block: 8.7rem;
+
     &.hero {
         @media (max-width: 767px) {
             padding-top: 0;
         }
     }
+    &.footer {
+        padding-bottom: 2rem;
+    }
 
+}
+
+.attribution {
+    font-size: 1.8rem;
+    border-top: 1px solid $dark-grayish-violet;
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-top: 3rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }

@@ -79,6 +79,18 @@ section {
   @media (max-width: 767px) {
     section.hero {
       padding-top: 0; } }
+  section.footer {
+    padding-bottom: 2rem; }
+
+.attribution {
+  font-size: 1.8rem;
+  border-top: 1px solid #837d87;
+  text-align: center;
+  padding-top: 2.5rem;
+  margin-top: 3rem; }
+
+.attribution a {
+  color: #3e52a3; }
 
 header {
   background-color: white;
