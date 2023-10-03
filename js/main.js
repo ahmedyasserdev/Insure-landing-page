@@ -17,7 +17,7 @@ toggler.addEventListener("click" , () => {
 // Get the icons element
 const icons = document.querySelectorAll('.icons img');
 const footer = document.querySelector('.footer');
-const footerOffset = footer.offsetTop -200 ;
+const footerOffset = footer.offsetTop - 200 ;
 console.log(footerOffset)
 
 icons.forEach((icon) => {
